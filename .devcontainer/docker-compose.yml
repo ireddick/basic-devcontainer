@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  # service name we can use with docker-compose
+  app:
+    # build from the Dockerfile in .devcontainer
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # make our source dir available at /workspace in the container
+    volumes:
+      - type: bind
+        source: ..
+        target: /workspace
+    # directory in the container from where commands will be run
+    # (should this be in the DockerFile using WORKDIR?)
+    working_dir: /workspace
+    # prevent the container process from exiting
+    # so that we can connect to it
+    command: sleep infinity
