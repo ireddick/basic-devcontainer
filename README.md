@@ -3,7 +3,7 @@ based on the Graceful Dev devcontainers course [here](https://graceful.dev/cours
 
 Bring the container up and get a shell with:
 
-    ./scripts/devcontainer-shell
+    ./scripts/devcontainer-shell.sh
 
 then to get a bovine greeting, run:
 
